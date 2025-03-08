@@ -1,8 +1,16 @@
-function Input() {
+import React from "react";
+
+function Input({ text, setText}) {
+
+   
 return(
     <>
     <div className="input-section">
-        <textarea></textarea>
+        <textarea value={text}
+        onChange={(e) => {
+            setText(e.target.value)
+        }}
+        ></textarea>
         <div className="extra">
             <div className="settings">
                 <label>   
