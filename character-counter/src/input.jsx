@@ -1,7 +1,7 @@
 function Input() {
 return(
     <>
-    <div>
+    <div className="input-section">
         <textarea></textarea>
         <div>
         <label>   
