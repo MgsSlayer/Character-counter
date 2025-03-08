@@ -3,7 +3,17 @@ return(
     <>
     <div>
         <textarea></textarea>
-        <button>Analyze Text</button>
+        <div>
+        <label>   
+        <input type="checkbox"></input>
+        Exclude Spaces
+        </label>
+        <label>   
+        <input type="checkbox"></input>
+        Set Character Limit
+        </label>
+        </div>
+        <p></p>
     </div>
     </>
 )
