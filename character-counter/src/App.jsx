@@ -9,10 +9,9 @@ import Density from './Density.jsx';
 function App() {
     const [text, setText] = useState("");
     const [ignoreSpaes, setIgnoreSpaces] = useState(false);
-    const [characterLimit, SetcharacterLimit] = useState(150);
     const [limit, setLimit] = useState(false);
-
-
+    const characterLimit = 150;
+    // const [characterLimit, SetcharacterLimit] = useState(150);
    
  
     const charCount = ignoreSpaes ? text.replace(/\s/g, "").length : text.length;
@@ -21,7 +20,6 @@ function App() {
 
     const limited = charCount > characterLimit? "limit exceeded" : charCount;
    
-
  return(
   <>
   <Header/>
@@ -35,8 +33,6 @@ function App() {
   <Density/>
   </>
  )
-}
-
-// characterLimit ? "Characters have been exceeded" : charCount 
+} 
 
 export default App
