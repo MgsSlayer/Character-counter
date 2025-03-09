@@ -1,6 +1,6 @@
 import React from "react";
 
-function Input({ text, setText}) {
+function Input({ text, setText, ignoreSpaces, setIgnoreSpaces, limit, setLimit}) {
 
    
 return(
@@ -14,11 +14,11 @@ return(
         <div className="extra">
             <div className="settings">
                 <label>   
-                <input type="checkbox"></input>
+                <input type="checkbox" checked={ignoreSpaces} onChange={()=> {setIgnoreSpaces(!ignoreSpaces)}}></input>
                 Exclude Spaces
                 </label>
                 <label>   
-                <input type="checkbox"></input>
+                <input type="checkbox" checked={limit} onChange={()=>{setLimit(!limit)}}></input>
                 Set Character Limit
                 </label>
             </div>
