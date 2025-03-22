@@ -24,6 +24,9 @@ body{
 }
 
 .header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 1rem 0;
 }
 
@@ -93,7 +96,7 @@ body{
 .card{
   padding: 1rem;
   border-radius: 10px;
-  min-width: 30%;
+  min-width: 32.5%;
 }
 
 @media (prefers-color-scheme: light) {
@@ -107,6 +110,13 @@ body{
   button {
     background-color: #f9f9f9;
   }
+}
+
+@media (max-width: 550px){
+  .card{
+    min-width: 100% ;
+  } 
+  
 }
 
 
