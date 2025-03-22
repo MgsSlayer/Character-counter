@@ -66,6 +66,8 @@ body{
 .card{
   min-width: none;
   padding: 1rem;
+  border-radius: 10px;
+  min-width: 10rem;
 }
 
 @media (prefers-color-scheme: light) {
