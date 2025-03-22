@@ -13,9 +13,9 @@ function App() {
   <Hero/>
   <Input/>
   <div className='card-div'>
-  <Cards colorClass="orange"count={278} value="Total Characters"/>
+  <Cards colorClass="purple"count={278} value="Total Characters"/>
   <Cards colorClass="yellow" count={39} value="Word Count"/>
-  <Cards colorClass="purple" count={4} value="Sentence Count"/>
+  <Cards colorClass="orange" count={4} value="Sentence Count"/>
   </div>
   <Density/>
   </>
