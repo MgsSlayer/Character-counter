@@ -52,9 +52,11 @@ body{
   min-height: 10rem;
 }
 
-.orange{background-color: orange;}
-.yellow{background-color: yellow;}
-.purple{background-color: purple;}
+.orange{background: linear-gradient(90deg, #cc5500, #ff9500);
+}
+.yellow{background: linear-gradient(90deg, #ffcc00, #ff9966);
+}
+.purple{background: linear-gradient(90deg, #800080, #d147d1);}
 
 .card-div{
   display: flex;
