@@ -34,7 +34,7 @@ body{
 .hero{
   display: flex;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin: 2.5rem 0;
 }
 
 .hero h2{
@@ -49,7 +49,25 @@ body{
 }
 
 .input-section textarea{
+  padding: 1rem;
   min-height: 10rem;
+  border-radius: 10px;
+  border: 1px solid hsla(0, 0%, 20%, 0.425);
+  outline: none;
+}
+
+.extra{
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings{
+  display: flex;
+  gap: 1.5rem;
+}
+
+.settings input{
+  margin-right: 0.5rem;
 }
 
 .orange{background: linear-gradient(90deg, #cc5500, #ff9500);
@@ -63,6 +81,7 @@ body{
   justify-content: center;
   gap: 1rem;
   color: #070707;
+  margin-top: 3rem;
 }
 
 .card{
