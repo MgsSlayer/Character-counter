@@ -124,6 +124,10 @@ body{
   gap: 1.5rem;
 }
 
+.densityList{
+  list-style: none;
+}
+
 .outer{
   height: 0.9rem;
   min-width: 15rem;
