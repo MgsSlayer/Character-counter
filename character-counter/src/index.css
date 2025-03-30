@@ -15,7 +15,7 @@
 
 *{
   margin: 0;
-  padding: o;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -118,19 +118,31 @@ body{
   gap: 1rem;
 }
 
+.density_header{
+  margin-bottom: 1.5rem;
+}
+
 .density{
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
-.densityList{
+.density_list{
   list-style: none;
+}
+
+.density_list li{
+  display: flex;
+  justify-content: space-between;
 }
 
 .outer{
   height: 0.9rem;
-  min-width: 15rem;
+  /* min-width: 15rem; */
+  width: 95%;
+  background-color: grey;
+  border-radius: 15px;
 }
 
 .inner{
@@ -139,6 +151,15 @@ body{
   background-color: #d147d1;
   border-radius: 20px;
 
+}
+
+.span1{
+  padding: 0 2rem 0 0;
+  width: 1%;
+}
+.span2{
+  padding: 0 1.5rem;
+  width: 1%;
 }
 
 @media (prefers-color-scheme: light) {

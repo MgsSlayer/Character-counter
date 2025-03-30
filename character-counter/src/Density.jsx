@@ -10,12 +10,12 @@ function Density({ text }) {
 
     return (
         <div>
-            <h1>Letter Density</h1>
+            <h1 className="density_header">Letter Density</h1>
             {Object.keys(letterFrequency).length > 0 ? (
-                <ul className="densityList">
+                <ul className="density_list">
                     {Object.entries(letterFrequency).map(([letter, count]) => (
                         <li key={letter}>
-                            {letter.toUpperCase()}: {count}
+                            <span className="span1">{letter.toUpperCase()}</span> <div className="outer"><div className="inner"></div></div> <span className="span2">{count}</span>
                         </li>
                     ))}
                 </ul>
