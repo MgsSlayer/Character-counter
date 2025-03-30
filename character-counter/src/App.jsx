@@ -18,7 +18,7 @@ function App() {
     const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
     const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
 
-    // const charDensity = 
+    // const letterFrequency =  
 
     const limited = charCount > characterLimit? "limit exceeded" : charCount;
    
@@ -32,7 +32,7 @@ function App() {
   <Cards colorClass="yellow" count={words} value="Word Count"/>
   <Cards colorClass="orange" count={sentences} value="Sentence Count"/>
   </div>
-  <Density/>
+  <Density text={text}/>
   </>
  )
 } 
