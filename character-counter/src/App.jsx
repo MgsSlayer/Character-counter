@@ -18,6 +18,8 @@ function App() {
     const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
     const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
 
+    // const charDensity = 
+
     const limited = charCount > characterLimit? "limit exceeded" : charCount;
    
  return(
