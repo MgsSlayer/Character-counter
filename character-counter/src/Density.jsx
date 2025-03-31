@@ -1,4 +1,4 @@
-function Density({ text }) {
+function Density({ text, totalLetters }) {
     const letterFrequency = text
         .toLowerCase()
         .split("")
@@ -8,16 +8,28 @@ function Density({ text }) {
             return acc;
         }, {});
 
+       
+
     return (
         <div>
             <h1 className="density_header">Letter Density</h1>
             {Object.keys(letterFrequency).length > 0 ? (
                 <ul className="density_list">
-                    {Object.entries(letterFrequency).map(([letter, count]) => (
+                    {Object.entries(letterFrequency).map(([letter, count]) => {
+                        
+                        const percentage = ((count / totalLetters) * 100).toFixed(2);
+
+                        const densityStyle = {
+                            width: `${percentage}%`
+                        }
+
+                        return(
+
                         <li key={letter}>
-                            <span className="span1">{letter.toUpperCase()}</span> <div className="outer"><div className="inner"></div></div> <span className="span2">{count}</span>
+                            <span className="span1">{letter.toUpperCase()}</span> <div className="outer"><div className="inner" style={densityStyle}></div></div> <span className="span2">{count}</span><span>({percentage})</span>
                         </li>
-                    ))}
+                        );
+                    })}
                 </ul>
             ) : (
                 <p>No Letters</p>
@@ -48,3 +60,20 @@ export default Density;
 
     //     Object.entries(letterFrequency)
     // .map(([letter, count])=> `${letter.toUpperCase()} ${count}`).join(", ");
+
+
+
+    // <div>
+    //         <h1 className="density_header">Letter Density</h1>
+    //         {Object.keys(letterFrequency).length > 0 ? (
+    //             <ul className="density_list">
+    //                 {Object.entries(letterFrequency).map(([letter, count]) => (
+    //                     <li key={letter}>
+    //                         <span className="span1">{letter.toUpperCase()}</span> <div className="outer"><div className="inner"></div></div> <span className="span2">{count}</span>
+    //                     </li>
+    //                 ))}
+    //             </ul>
+    //         ) : (
+    //             <p>No Letters</p>
+    //         )}
+    //     </div>

@@ -17,8 +17,7 @@ function App() {
     const charCount = ignoreSpaes ? text.replace(/\s/g, "").length : text.length;
     const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
     const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
-
-    // const letterFrequency =  
+    const totalLetters = text.replace(/[^a-z]/gi,"").length;
 
     const limited = charCount > characterLimit? "limit exceeded" : charCount;
    
@@ -32,7 +31,7 @@ function App() {
   <Cards colorClass="yellow" count={words} value="Word Count"/>
   <Cards colorClass="orange" count={sentences} value="Sentence Count"/>
   </div>
-  <Density text={text}/>
+  <Density text={text} totalLetters={totalLetters}/>
   </>
  )
 } 
