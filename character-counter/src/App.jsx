@@ -22,6 +22,7 @@ function App() {
     const limited = charCount > characterLimit? "limit exceeded" : charCount;
    
  return(
+    
   <>
   <Header/>
   <Hero/>
